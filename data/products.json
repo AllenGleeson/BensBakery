@@ -1,0 +1,82 @@
+[
+    {
+        "id": 0,
+        "name": "Sourdough Bread",
+        "description": "Crusty and chewy artisan sourdough loaf, fermented for 24 hours.",
+        "image": "../images/sourdough.webp",
+        "price": 4.50,
+        "category": "Bread"
+    },
+    {
+        "id": 1,
+        "name": "Croissant",
+        "description": "Flaky, buttery French pastry perfect for breakfast or a snack.",
+        "image": "../images/croissant.webp",
+        "price": 2.25,
+        "category": "Pastry"
+    },
+    {
+        "id": 2,
+        "name": "Chocolate Muffin",
+        "description": "Rich and moist chocolate muffin with a gooey center.",
+        "image": "../images/muffin.webp",
+        "price": 2.75,
+        "category": "Pastry"
+    },
+    {
+        "id": 3,
+        "name": "Cinnamon Roll",
+        "description": "Soft dough spiraled with cinnamon sugar and topped with vanilla glaze.",
+        "image": "../images/cinnamon-roll.webp",
+        "price": 3.00,
+        "category": "Pastry"
+    },
+    {
+        "id": 4,
+        "name": "Baguette",
+        "description": "Classic French baguette with a crisp crust and fluffy interior.",
+        "image": "../images/loaf.webp",
+        "price": 2.00,
+        "category": "Bread"
+    },
+    {
+        "id": 5,
+        "name": "Blueberry Danish",
+        "description": "Pastry filled with blueberry compote and a hint of cream cheese.",
+        "image": "../images/danish-pastry.webp",
+        "price": 3.20,
+        "category": "Pastry"
+    },
+    {
+        "id": 6,
+        "name": "Carrot Cake Slice",
+        "description": "Spiced carrot cake with cream cheese frosting and walnut topping.",
+        "image": "../images/carrot-cake.webp",
+        "price": 3.50,
+        "category": "Cake"
+    },
+    {
+        "id": 7,
+        "name": "Chocolate Chip Cookie",
+        "description": "Chewy cookie packed with chocolate chips and a hint of vanilla.",
+        "image": "../images/cookies.webp",
+        "price": 1.50,
+        "category": "Cookie"
+    },
+    {
+        "id": 8,
+        "name": "Lemon Tart",
+        "description": "Tangy lemon curd in a buttery crust, topped with powdered sugar.",
+        "image": "../images/tart.webp",
+        "price": 3.80,
+        "category": "Cake"
+    },
+    {
+        "id": 9,
+        "name": "Gluten-Free Brownie",
+        "description": "Fudgy gluten-free brownie made with almond flour and dark chocolate.",
+        "image": "../images/brownie.webp",
+        "price": 3.00,
+        "category": "Cake"
+    }
+]
