@@ -14,6 +14,10 @@ body{
     text-decoration: none;
     font-size: 0.9rem;
 }
+/* Helpers */
+.bold{
+    font-weight: 700;
+}
 /* Navigation */
 nav{
     font-family: "Jost", sans-serif;
@@ -57,10 +61,6 @@ footer h4{
 }
 footer ul{
     font-family: "Jost", sans-serif;
-}
-/* Helpers */
-.bold{
-    font-weight: 700;
 }
 /* Shopping cart */
 .dropdown-menu{
@@ -107,9 +107,6 @@ footer ul{
     color: #fff;
 }
 /* Menu */
-/* #menu img{
-    width: 10rem;
-} */
 #menu hr {
     margin: 1.2rem 0rem 2rem 0rem;
 }
@@ -159,7 +156,7 @@ footer ul{
 }
 
 /*  Order Page */
-/*form styles*/
+/* Delivery/Payment Form */
 #msform {
     width: 400px;
     margin: 1.5rem auto 3rem auto;
@@ -175,7 +172,6 @@ footer ul{
 	box-sizing: border-box;
 	width: 80%;
 	margin: 0 10%;
-	
 	/*stacking fieldsets above each other*/
 	position: relative;
 }
@@ -203,9 +199,6 @@ footer ul{
     width: 50% !important;
     margin: 10px 5px !important;
 }
-/* #msform .action-button:hover, #msform .action-button:focus {
-	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
-} */
 .form-check-label{
     margin-top: 0.4rem;
 }
@@ -301,10 +294,9 @@ footer ul{
 	position: absolute;
 	left: -50%;
 	top: 9px;
-	z-index: -1; /*put it behind the numbers*/
+	z-index: -1;
 }
 #progressbar li:first-child:after {
-	/*connector not needed before the first step*/
 	content: none; 
 }
 /*marking active/completed steps green*/
@@ -321,7 +313,7 @@ footer ul{
 .delete-item:hover{
     box-shadow: #000 1px 1px 2px -1px;
 }
-/* Common styles for all flash messages */
+/* Flash messages */
 .flash-message {
     position: fixed;
     top: 6rem;
@@ -334,24 +326,19 @@ footer ul{
     opacity: 0;
     transition: opacity 0.5s ease;
 }
-
 .flash-message.show {
     opacity: 1;
 }
-
-/* Specific styles for different types of messages */
 .flash-message-add {
-    background-color: #4CAF50; /* Green background */
+    background-color: #4CAF50;
 }
-
 .flash-message-qty {
-    background-color: #af904c; /* Brown background */
+    background-color: #af904c;
 }
-
 .flash-message-update {
-    background-color: #4CAF50; /* Green background */
+    background-color: #4CAF50;
 }
-
+/* End Allen code */ 
 
 /* Salini- Student ID : x24220701 */ 
 /* For entire page and body styling */
@@ -559,3 +546,4 @@ body {
 .btn-container {
     margin-top: 20px;
 }
+/* End Salini code */ 

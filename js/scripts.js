@@ -94,6 +94,18 @@ function updateCartTotal() {
     cartTotalDisplay.textContent = `€${total.toFixed(2)}`;
 }
 
+// Populates menu with json file of products
+// Images are from pixabay:
+// https://pixabay.com/photos/sourdough-bread-homemade-7739022/
+// https://pixabay.com/photos/loaf-bakery-preparation-fresh-bread-2436370/
+// https://pixabay.com/photos/croissant-bread-bake-food-taste-2559862/
+// https://pixabay.com/photos/muffin-cake-ignite-baking-homemade-299479/
+// https://pixabay.com/photos/cinnamon-roll-pastry-cinnamon-4890783/
+// https://pixabay.com/photos/danish-pastry-cream-cheese-jam-892909/
+// https://pixabay.com/photos/brownie-dessert-cake-sweet-548591/
+// https://pixabay.com/photos/cookies-sweets-dessert-8082386/
+// https://pixabay.com/photos/tart-pie-dessert-pastry-sweet-6011609/
+// https://pixabay.com/photos/cake-carrot-cake-cake-stand-dessert-4890393/
 function populateMenu() {
     const menu = document.getElementById("menu");
     fetch('../data/products.json')
@@ -109,12 +121,11 @@ function populateMenu() {
                 categories[item.category].push(item);
             });
 
-            // Clear the menu in case it's being repopulated
+            // Clear the menu
             menu.innerHTML = '';
 
             // Loop through each category
             for (const category in categories) {
-                // Add the category heading
                 menu.innerHTML += `<h2>${category}</h2>`;
 
                 // Add each item in the category
@@ -143,6 +154,7 @@ function populateMenu() {
                     `;
                 });
             }
+            // Event listener for increment, decrement and the bag icon button
             menu.addEventListener('click', (e) => {
                 const target = e.target;
             
@@ -163,7 +175,7 @@ function populateMenu() {
             
                     if (quantity > 0) {
                         // Retrieve the item details from the row's data attributes
-                        const itemId = parseInt(row.dataset.id);  // Make sure this is the correct 'data-id'
+                        const itemId = parseInt(row.dataset.id);
                         const itemName = row.querySelector('.item-name').textContent;
                         const itemPrice = parseFloat(row.querySelector('span').textContent.replace('€', '').trim());
                         const itemImage = row.querySelector('img').src;
@@ -199,7 +211,6 @@ function populateMenu() {
                         updateCartTotal();
                         showFlashMessageAdd();
                     } else {
-                        console.log(`Please select a quantity before adding "${name}" to cart.`);
                         showFlashMessageQty()
                     }
                 }
@@ -208,12 +219,14 @@ function populateMenu() {
         .catch(err => console.error('Error loading JSON:', err));
 }
 
+// Populates order cart from cart in session storage
 function populateOrderPageCart(cartDropdown) {
     const cartData = JSON.parse(sessionStorage.getItem("cart") || "[]");
     const orderList = document.getElementById("order-list");
     const orderTotalDisplay = document.getElementById("order-total");
     orderList.innerHTML = "";
 
+    // If no items then show no items in cart
     if (cartData.length === 0) {
         orderList.innerHTML = `<p>No items in cart</p>`;
         orderTotalDisplay.textContent = "€0.00";
@@ -221,7 +234,7 @@ function populateOrderPageCart(cartDropdown) {
     }
 
     let total = 0;
-
+    // Each time is multiplied by the quantity to get the total and html is added for each item
     cartData.forEach((item, index) => {
         const itemTotal = item.price * item.quantity;
         total += itemTotal;
@@ -255,11 +268,11 @@ function populateOrderPageCart(cartDropdown) {
         const incrementBtn = li.querySelector(".increment");
         const deleteBtn = li.querySelector(".delete-item");
 
+        // Event listeners for increasing, decreasing or deleting an item from the cart
         decrementBtn.addEventListener("click", () => {
             if (cartData[index].quantity > 1) {
                 cartData[index].quantity--;
             } else {
-                // Optional: remove if quantity goes to 0
                 return;
             }
             sessionStorage.setItem("cart", JSON.stringify(cartData));
@@ -285,40 +298,40 @@ function populateOrderPageCart(cartDropdown) {
     orderTotalDisplay.textContent = `€${total.toFixed(2)}`;
 }
 
-// Function to display the "Added to Cart" flash message
+// Flash message if user adds to the cart
 function showFlashMessageAdd() {
     const flashMessage = document.getElementById('flashMessageAdd');
-    flashMessage.style.display = 'block'; // Show the message
-    flashMessage.classList.add('show'); // Add animation for opacity
+    flashMessage.style.display = 'block';
+    flashMessage.classList.add('show');
     
     // Hide the message after 2 seconds
     setTimeout(() => {
         flashMessage.classList.remove('show');
-        setTimeout(() => flashMessage.style.display = 'none', 500); // Hide the message after fade out
+        setTimeout(() => flashMessage.style.display = 'none', 500);
     }, 2000);
 }
-// Function to display the "Added to Cart" flash message
+// Flash message if user tries to add an item without selecting a quantity
 function showFlashMessageQty() {
     const flashMessage = document.getElementById('flashMessageQty');
-    flashMessage.style.display = 'block'; // Show the message
-    flashMessage.classList.add('show'); // Add animation for opacity
+    flashMessage.style.display = 'block';
+    flashMessage.classList.add('show');
     
     // Hide the message after 2 seconds
     setTimeout(() => {
         flashMessage.classList.remove('show');
-        setTimeout(() => flashMessage.style.display = 'none', 500); // Hide the message after fade out
+        setTimeout(() => flashMessage.style.display = 'none', 500);
     }, 2000);
 }
-// Function to display the "Added to Cart" flash message
+// Flash message when the user adds or moves items on the order page
 function showFlashMessageUpdate() {
     const flashMessage = document.getElementById('flashMessageUpdate');
-    flashMessage.style.display = 'block'; // Show the message
-    flashMessage.classList.add('show'); // Add animation for opacity
+    flashMessage.style.display = 'block';
+    flashMessage.classList.add('show');
     
     // Hide the message after 2 seconds
     setTimeout(() => {
         flashMessage.classList.remove('show');
-        setTimeout(() => flashMessage.style.display = 'none', 500); // Hide the message after fade out
+        setTimeout(() => flashMessage.style.display = 'none', 500);
     }, 2000);
 }
 
@@ -335,12 +348,12 @@ $(document).ready(function() {
         // Check if all inputs in current step are valid
         for (let i = 0; i < inputs.length; i++) {
             if (!inputs[i].checkValidity()) {
-                inputs[i].reportValidity(); // show error message
-                return; // stop if invalid
+                inputs[i].reportValidity();
+                return;
             }
         }
     
-        // Save delivery data
+        // Save delivery data to be used on payment form or if the user presses previous to come back to this form
         const deliveryData = {
             name: $("input[name='name']").val(),
             address1: $("input[name='address-line-1']").eq(0).val(),
@@ -356,7 +369,7 @@ $(document).ready(function() {
     
         current_fs = currentFieldset;
         next_fs = currentFieldset.next();
-    
+        // Flip over to the next fieldset form
         $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
     
         next_fs.show();
@@ -424,7 +437,7 @@ $(document).ready(function() {
             easing: 'easeInOutBack'
         });
     });
-
+    // Checkbox to use same information as delivery information in payment form or not
     $("#flexCheckDefault").on("change", function () {
         if ($(this).is(":checked")) {
             const savedData = JSON.parse(sessionStorage.getItem("deliveryDetails"));
@@ -442,6 +455,8 @@ $(document).ready(function() {
             $("input[name='eircode']").eq(1).val('');
         }
     });
+    // The confirm button on payment form will check if valid and if valid will display a message that the order is out to delivery
+    // and the arrival time to be one hour from the current time
     $(".submit").click(function (e) {
         e.preventDefault();
     
@@ -472,7 +487,7 @@ $(document).ready(function() {
         `);
     });    
 });
-
+// End of Allen code
 
 // Salini Code
 // Cake Decoration Game
@@ -584,3 +599,4 @@ function changeFlavor() {
         optionsCount = 0;
     }
 }
+// End of Salini code

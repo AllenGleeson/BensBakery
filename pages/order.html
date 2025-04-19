@@ -29,6 +29,7 @@
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
                     <a class="navbar-brand" href="../index.html">
+                        <!-- Logo created with https://www.aiimagegenerator.org/ -->
                         <img src="../images/logo.webp" loading="lazy" id="logo" alt="Bens Bakery Logo" class="rounded-circle">
                     </a>
                     <div class="divider"></div>
@@ -55,7 +56,7 @@
                                             <p class="my-0 account-bag">€0.00</p>
                                         </div>
                                     </button>
-                                    <!-- Bootstrap-style Dropdown -->
+                                    <!-- Shopping Bag Dropdown -->
                                     <div id="cartDropdown" class="dropdown-menu dropdown-menu-end p-3 shadow" style="display: none;">
                                         <p class="mb-0">Your cart is empty.</p>
                                     </div>
@@ -65,6 +66,7 @@
                     </div>
                 </div>
             </nav>
+            <!-- Flash message when cart is updated -->
             <div id="flashMessageUpdate" class="flash-message-update flash-message" style="display: none;">
                 Cart Updated.
             </div>
@@ -72,7 +74,7 @@
         <main class="container mt-1">
             <div class="row">
                 <section id="details" class="col-6">
-                    <!-- multistep form -->
+                    <!-- multistep form for delivery and payment details -->
                     <form id="msform">
                         <!-- progressbar -->
                         <ul id="progressbar">
@@ -109,10 +111,11 @@
                     </form>
                 </section>
                 <section id="order-section" class="col-6">
+                    <!-- Order container for the users selected items -->
                     <div id="order">
                         <h6>ORDER</h6>
                         <ul id="order-list">
-                            <!-- Filled by JS -->
+                            <!-- Filled by JS from cart saved in session storage -->
                         </ul>
                         <div>
                             <span class="bold">Total:</span>
