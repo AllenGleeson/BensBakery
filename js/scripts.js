@@ -490,6 +490,12 @@ $(document).ready(function() {
 // End of Allen code
 
 // Salini Code
+// Click events for image gallery on home page
+$(document).ready(function () {
+    $('.clickable-img').on('click', function () {
+      $(this).siblings('.img-desc').toggleClass('d-none');
+    });
+});  
 // Cake Decoration Game
 let currentOption = null;
 let optionsCount = 0;
