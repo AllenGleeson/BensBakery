@@ -15,6 +15,9 @@ An about page with more about the business and a interactive fun game to decorat
 Bens Bakery is a frontend project for the Web Dev Module in the Higher Diploma in Science in Computing with NCI.
 ##
 
+### Deployment
+Website is uploaded to GitHub and deployed on GitHub Pages.
+
 ### Credits
 Logo is AI generated with: https://www.aiimagegenerator.org/
 Images for products used in menu are from pixabay.
