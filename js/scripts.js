@@ -132,7 +132,7 @@ function populateMenu() {
                 categories[category].forEach((item, index) => {
                     menu.innerHTML += `
                         <div class="row justify-content-evenly menu-item align-items-center mb-3" data-id="${item.id}">
-                            <div class="col-2">
+                            <div class="col-2 p-0">
                                 <img class="w-100" src="${item.image}" alt="${item.name}">
                             </div>
                             <div class="col-7">
@@ -144,7 +144,7 @@ function populateMenu() {
                                     <span>€${item.price.toFixed(2)}</span>
                                 </div>
                             </div>
-                            <div class="col-3 d-flex align-items-center gap-2">
+                            <div class="align-items-center col-3 d-flex gap-md-2 p-0">
                                 <button class="btn btn-sm decrement">−</button>
                                 <input type="text" class="form-control quantity-input text-center" value="0" readonly />
                                 <button class="btn btn-sm increment">+</button>
