@@ -1,9 +1,10 @@
 /* Allen Code */
-body{
+body {
     font-family: "Jost", sans-serif;
 }
+
 /* Buttons */
-.cstm-button{
+.cstm-button {
     width: 100px;
     background: #e1008ecc;
     color: white;
@@ -14,103 +15,130 @@ body{
     text-decoration: none;
     font-size: 0.9rem;
 }
+
 /* Helpers */
-.bold{
+.bold {
     font-weight: 700;
 }
+
 /* Navigation */
-nav{
+nav {
     font-family: "Jost", sans-serif;
 }
-.navbar-brand{
+
+.navbar-brand {
     width: 10rem;
     margin-right: 0rem;
 }
-.navbar{
+
+.navbar {
     background-color: #e1008ecc;
     height: 3.6rem;
     margin: 2rem 0rem;
     text-shadow: 2px 0px 1px #000000;
 }
-.navbar-brand img{
+
+.navbar-brand img {
     width: 100%;
 }
-.nav-link{
+
+.nav-link {
     color: #000000;
     transition: box-shadow 0.2s ease-in-out;
     letter-spacing: 1px;
 }
+
 nav .nav-link {
     color: #ffffff;
 }
-.nav-link.active{
+
+.nav-link.active {
     font-weight: 700;
     text-shadow: 1px 1px 1px #e0e0e0;
 }
-.nav-link:hover{
+
+.nav-link:hover {
     text-shadow: 1px 1px 2px #e0e0e0;
 }
-.divider{
+
+.divider {
     width: 2rem;
     border-bottom: 1px solid #ffffff9c;
     margin-right: 1rem;
 }
+
 /* Footer */
-footer h4{
+footer h4 {
     font-family: "Playfair Display", serif;
 }
-footer ul{
+
+footer ul {
     font-family: "Jost", sans-serif;
 }
+
 /* Shopping cart */
-.dropdown-menu{
+.dropdown-menu {
     width: max-content;
 }
+
 .fas {
     color: rgb(255 47 179) !important;
 }
+
 .btn-outline-secondary {
     --bs-btn-color: #ff2fb3;
 }
+
 #cartToggle {
     transition: box-shadow 0.2s ease-in-out;
     font-size: 0.8rem;
     padding: 0.1rem;
 }
+
 #cartToggle .fas {
     color: rgb(244 244 244) !important;
 }
+
 #cartToggle:hover {
     box-shadow: #000 1px 1px 2px -1px;
 }
-#cartDropdown{
+
+#cartDropdown {
     display: block;
     top: 3rem;
     right: 0rem;
     text-shadow: none;
     max-width: 450px;
 }
-#cartDropdown h6{
+
+#cartDropdown h6 {
     font-size: 0.8rem;
 }
-.cart-item{
+
+.cart-item {
     font-size: 0.8rem;
 }
+
 #cartDropdown .quantity-input {
     width: 3rem;
 }
-#cartDropdown .increment, .decrement {
+
+#cartDropdown .increment,
+.decrement {
     font-size: 1rem !important;
 }
-.account-bag{
+
+.account-bag {
     text-shadow: 2px 0px 1px #d27300;
     color: #fff;
 }
+
 /* Menu */
 #menu hr {
     margin: 1.2rem 0rem 2rem 0rem;
 }
-#menu h2{
+
+#menu h2 {
     font-family: "Cookie", cursive;
     font-size: 2.5rem;
     margin: 3rem 0rem 1.2rem 4rem;
@@ -118,40 +146,52 @@ footer ul{
     letter-spacing: 0.36rem;
     border-bottom: 1px solid #e733a5;
 }
-.menu-item{
+
+.menu-item {
     margin: 1rem;
 }
-.menu-item span{
+
+.menu-item span {
     margin-top: 1.5%;
 }
-.menu-item .btn{
+
+.menu-item .btn {
     color: #e733a5;
 }
-.menu-item .btn:hover{
+
+.menu-item .btn:hover {
     box-shadow: #000 1px 1px 2px -1px;
 }
-.menu-description{
+
+.menu-description {
     font-family: "Jost", sans-serif;
 }
-.menu-description h6{
+
+.menu-description h6 {
     margin: 0;
 }
-.menu-description p{
+
+.menu-description p {
     margin: 0.3rem 0rem 0rem 1rem;
 }
-.quantity-input{
+
+.quantity-input {
     width: 5rem;
 }
-.increment, .decrement{
+
+.increment,
+.decrement {
     font-size: 1.2rem;
     border: none;
 }
+
 .add-to-cart {
     transition: box-shadow 0.2s ease-in-out;
     cursor: pointer;
     padding: 1rem 0.5rem 1rem 0.5rem;
 }
-.add-to-cart:hover{
+
+.add-to-cart:hover {
     box-shadow: #000 1px 1px 2px -1px;
 }
 
@@ -163,22 +203,25 @@ footer ul{
     text-align: center;
     position: relative;
 }
+
 #msform fieldset {
-	background: white;
-	border: 0 none;
-	border-radius: 3px;
-	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-	padding: 20px 30px;
-	box-sizing: border-box;
-	width: 80%;
-	margin: 0 10%;
-	/*stacking fieldsets above each other*/
-	position: relative;
+    background: white;
+    border: 0 none;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 10%;
+    /*stacking fieldsets above each other*/
+    position: relative;
 }
+
 /*Hide all except first fieldset*/
 #msform fieldset:not(:first-of-type) {
-	display: none;
+    display: none;
 }
+
 /*inputs*/
 #msform input:not([type="radio"]),
 #msform textarea {
@@ -189,6 +232,7 @@ footer ul{
     font-size: 13px;
     width: 100%;
 }
+
 /*buttons*/
 #msform .action-button {
     font-weight: bold;
@@ -196,25 +240,31 @@ footer ul{
     font-size: 14px;
     border: none;
 }
+
 #msform .cstm-button {
     width: 50% !important;
     margin: 10px 5px !important;
 }
-.form-check-label{
+
+.form-check-label {
     margin-top: 0.4rem;
 }
+
 .form-check-input:checked {
     background-color: #e1008ecc;
     border-color: #e1008ecc;
 }
+
 .form-check-input:focus {
     border-color: #e1008ecc;
     box-shadow: 0 0 0 .25rem #e1008e69;
 }
+
 /* Order */
-#order-section{
+#order-section {
     min-height: 40rem;
 }
+
 #order {
     background: white;
     width: 90%;
@@ -224,96 +274,114 @@ footer ul{
     box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
     padding: 1rem 4rem 1rem 1rem;
 }
-#order.disabled{
+
+#order.disabled {
     opacity: 0.5;
     background-color: #888888;
 }
-#order ul{
+
+#order ul {
     padding: 0;
     list-style: none;
 }
+
 .order-item .quantity-input {
     width: 3rem;
 }
-.order-item .btn{
+
+.order-item .btn {
     color: #e733a5;
 }
-.order-item .btn:hover{
+
+.order-item .btn:hover {
     box-shadow: #000 1px 1px 2px -1px;
 }
-.item-price{
+
+.item-price {
     margin-top: 1%;
 }
+
 /*headings*/
 .fs-title {
     font-size: 1rem;
-	text-transform: uppercase;
-	color: #2C3E50;
-	margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #2C3E50;
+    margin-bottom: 10px;
 }
+
 .fs-subtitle {
-	font-weight: normal;
-	font-size: 13px;
-	color: #666;
-	margin-bottom: 20px;
+    font-weight: normal;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
 }
+
 /*progressbar*/
 #progressbar {
-	margin-bottom: 30px;
-	overflow: hidden;
+    margin-bottom: 30px;
+    overflow: hidden;
     margin-left: 4rem;
-	/*CSS counters to number the steps*/
-	counter-reset: step;
+    /*CSS counters to number the steps*/
+    counter-reset: step;
 }
+
 #progressbar li {
-	list-style-type: none;
-	color: rgb(0, 0, 0);
-	text-transform: uppercase;
-	font-size: 9px;
-	width: 33.33%;
-	float: left;
-	position: relative;
+    list-style-type: none;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-size: 9px;
+    width: 33.33%;
+    float: left;
+    position: relative;
 }
+
 #progressbar li:before {
-	content: counter(step);
-	counter-increment: step;
-	width: 20px;
-	line-height: 20px;
-	display: block;
-	font-size: 10px;
-	color: #333;
-	background: white;
-	border-radius: 3px;
-	margin: 0 auto 5px auto;
+    content: counter(step);
+    counter-increment: step;
+    width: 20px;
+    line-height: 20px;
+    display: block;
+    font-size: 10px;
+    color: #333;
+    background: white;
+    border-radius: 3px;
+    margin: 0 auto 5px auto;
 }
+
 /*progressbar connectors*/
 #progressbar li:after {
-	content: '';
-	width: 100%;
-	height: 2px;
-	background: white;
-	position: absolute;
-	left: -50%;
-	top: 9px;
-	z-index: -1;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1;
 }
+
 #progressbar li:first-child:after {
-	content: none; 
+    content: none;
 }
+
 /*marking active/completed steps green*/
 /*The number of the step and the connector before it = green*/
-#progressbar li.active:before,  #progressbar li.active:after{
-	background: #e1008ecc;
-	color: white;
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #e1008ecc;
+    color: white;
 }
-.delete-item{
+
+.delete-item {
     transition: box-shadow 0.2s ease-in-out;
     cursor: pointer;
     padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
-.delete-item:hover{
+
+.delete-item:hover {
     box-shadow: #000 1px 1px 2px -1px;
 }
+
 /* Flash messages */
 .flash-message {
     position: fixed;
@@ -327,26 +395,33 @@ footer ul{
     opacity: 0;
     transition: opacity 0.5s ease;
 }
+
 .flash-message.show {
     opacity: 1;
 }
+
 .flash-message-add {
     background-color: #4CAF50;
 }
+
 .flash-message-qty {
     background-color: #af904c;
 }
+
 .flash-message-update {
     background-color: #4CAF50;
 }
-/* End Allen code */ 
 
-/* Salini- Student ID : x24220701 */ 
+/* End Allen code */
+
+/* Salini- Student ID : x24220701 */
 /* For entire page and body styling */
-html, body {
+html,
+body {
     height: 100%;
     max-width: 100%;
 }
+
 /*Animation in hopmpage for images to zoom in*/
 .carousel-item {
     height: 100vh;
@@ -354,18 +429,21 @@ html, body {
     background-position: center;
     animation: zoomEffect 10s ease-in-out forwards;
 }
+
 @keyframes zoomEffect {
-0% {
-    transform: scale(1);
-}
-100% {
-    transform: scale(1.1);
-}
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
 }
 
 .navbar {
     z-index: 10;
 }
+
 /* welcome note text*/
 
 .content {
@@ -378,11 +456,13 @@ html, body {
     text-align: center;
     text-shadow: 2px 1px 3px #000;
 }
-.content h1{
+
+.content h1 {
     font-family: 'Cookie';
     font-size: 4.5rem;
 }
-.brand{
+
+.brand {
     background-color: #f1f1f1;
     box-sizing: .5px;
     border-radius: 0%;
@@ -391,6 +471,7 @@ html, body {
 body {
     overflow-x: hidden;
 }
+
 .shop img:hover {
     border: 3px solid rgb(231 51 165);
 }
@@ -400,14 +481,17 @@ body {
     height: 150px;
     padding: 10px;
 }
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color:#f1f126 ; 
-    border-radius: 60%; 
+    background-color: #f1f126;
+    border-radius: 60%;
 }
-.carousel-inner{
+
+.carousel-inner {
     max-height: 40rem;
 }
+
 .fa {
     padding: 10px;
     font-size: 20px;
@@ -416,44 +500,56 @@ body {
     text-decoration: none;
     margin: 3px 2px;
 }
+
 .fa:hover {
     opacity: 0.7;
 }
+
 .fa-facebook {
     background: #3B5998;
     color: white;
 }
+
 .fa-instagram {
     background: #ee5555;
     color: white;
-}  
+}
+
 .fa-snapchat {
-    background: rgba(243, 243, 108, 0.944) ;
+    background: rgba(243, 243, 108, 0.944);
     color: rgb(252, 252, 244);
 }
+
 .img-desc {
     font-size: 0.9rem;
     margin-top: 0.5rem;
     color: #555;
     transition: all 0.3s ease;
-} 
+}
+
 .clickable-img {
     cursor: pointer;
-}  
-.about-section h1{
+}
+
+.about-section h1 {
     font-family: 'Cookie';
 }
-.about-section p{
+
+.about-section p {
     padding: 1rem 8rem 0rem 8rem;
 }
+
 .cake {
     width: 300px;
     height: 200px;
-    background-color: #f1eee7; /* Default cake color */
-    border-radius: 50% 50% 0 0; /* Rounded top edges for the cake */
+    background-color: #f1eee7;
+    /* Default cake color */
+    border-radius: 50% 50% 0 0;
+    /* Rounded top edges for the cake */
     position: relative;
     margin: 20px auto;
 }
+
 .cake-decorate {
     position: absolute;
     top: 20px;
@@ -461,16 +557,20 @@ body {
     transform: translateX(-50%);
     font-size: 30px;
 }
+
 .basicCake {
     width: 300px;
     height: 50px;
-    background-color: #f3f1ec; /* Bottom of the cake */
+    background-color: #f3f1ec;
+    /* Bottom of the cake */
     border-radius: 0 0 30% 30%;
 }
+
 .cake-options {
     text-align: center;
     margin-top: 30px;
 }
+
 .options {
     margin: 10px;
     background-color: #09dda5;
@@ -479,9 +579,11 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
+
 .options:hover {
     background-color: #3b0fb4;
 }
+
 #cake {
     display: flex;
     flex-direction: column-reverse;
@@ -491,6 +593,7 @@ body {
     height: 150px;
     overflow: hidden;
 }
+
 .vanillaCake {
     width: 250px;
     height: 130px;
@@ -502,6 +605,7 @@ body {
     bottom: 0;
     z-index: 0;
 }
+
 .pineappleCake {
     width: 250px;
     height: 130px;
@@ -513,6 +617,7 @@ body {
     bottom: 0;
     z-index: 0;
 }
+
 .chocolateCake {
     width: 250px;
     height: 130px;
@@ -524,6 +629,7 @@ body {
     bottom: 0;
     z-index: 0;
 }
+
 .placeTopping {
     width: 50px;
     height: auto;
@@ -532,28 +638,54 @@ body {
     transition: transform 0.3s ease;
     margin-bottom: -50px;
 }
+
 .placeTopping:active {
     transform: scale(1.1);
 }
+
 .toppings {
     display: flex;
     justify-content: center;
     gap: 15px;
     margin-top: 20px;
 }
+
 .topping {
     width: 50px;
     cursor: pointer;
 }
+
 .topping img {
     width: 100%;
     border: 2px solid #ddd;
     border-radius: 10px;
 }
+
 .topping img:hover {
     border-color: #f1c40f;
 }
+
 .btn-container {
     margin-top: 20px;
 }
-/* End Salini code */ 
+
+/* End Salini code */
+
+/* Media queries */
+
+@media (max-width: 575.98px) {
+    .shop img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {}
+
+@media (min-width: 768px) and (max-width: 991.98px) {}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {}
+
+@media (min-width: 1200px) {}
+
+@media (max-width: 992px) {}
