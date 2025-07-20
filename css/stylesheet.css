@@ -709,6 +709,14 @@ body {
     .menu .fa-lg {
         font-size: 1rem;
     }
+
+    .about-section p {
+        padding: 1rem;
+    }
+
+    #cake {
+        margin-top: 1rem;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {}
