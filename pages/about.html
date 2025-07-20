@@ -1,134 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Icon from Favicon.cs - https://www.favicon.cc/?action=icon&file_id=752326 -->
-        <link
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icon from Favicon.cs - https://www.favicon.cc/?action=icon&file_id=752326 -->
+    <link
         href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAaQBgAKg0nwCCCnkA0XfKAI8ThQDeitcAXABUAMRivAC9T7QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHd3d3d3dwAAcpKZmSknAAAZgoiIKJEAABiJiIiYgQAAFISIiEhBAAAWlpRJaWEAABYmJmJiYQAAAWIiIiYQAAAAEREREQAAAAAyIiIjAAAAdzhohoN3AAEidmZmZyIQAYiIZmaIiBA0iIZVVWiIQwNmZQAAVmYwAFVQAAAFVQDAAwAAwAMAAMADAADAAwAAwAMAAMADAADAAwAA4AcAAPAPAADwDwAAwAMAAIABAACAAQAAAAAAAIPBAADH4wAA"
         rel="icon" type="image/x-icon" />
-        <title>Bakery - About</title>
-        <meta name="description" content="Bens Bakery website selling a range of delicious pastries and treats." />
-        <meta name="author" content="Allen + Salini">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="../css/stylesheet.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Jost:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        <script src="../js/scripts.js"></script>
-    </head>
-    <body>
-        <header>
-            <!-- Navigation -->
-             <!-- Users can select pages or make their cart dropdown to edit it -->
-            <nav class="navbar navbar-expand-lg">
-                <div class="container">
-                    <a class="navbar-brand" href="../index.html">
-                        <!-- Logo created with https://www.aiimagegenerator.org/ -->
-                        <img src="../images/logo.webp" loading="lazy" id="logo" alt="Bens Bakery Logo" class="rounded-circle">
-                    </a>
-                    <div class="divider"></div>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item"><a class="nav-link" href="../index.html">HOME</a></li>
-                            <li class="nav-item"><a class="nav-link" href="./menu.html">MENU</a></li>
-                            <li class="nav-item"><a class="nav-link" href="./order.html">ORDER</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="./about.html">ABOUT</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul class="mb-2 mb-lg-0 mr-md-5 mr-sm-0 navbar-nav">
-                            <!-- Displays the shopping bag total amount. Clicking on the bag will allow user to edit contents -->
-                            <li class="list-inline-item nav-item rounded">
-                                <!-- Shopping Bag -->
-                                <div class="position-relative d-inline-block">
-                                    <button id="cartToggle" class="btn bg-transparent border-0">
-                                        <div class="text-center">
-                                            <i class="fas fa-shopping-bag fa-lg"></i>
-                                            <p class="my-0 account-bag">€0.00</p>
-                                        </div>
-                                    </button>
-                                    <!-- Shopping Bag Dropdown -->
-                                    <div id="cartDropdown" class="dropdown-menu dropdown-menu-end p-3 shadow" style="display: none;">
-                                        <p class="mb-0">Your cart is empty.</p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <main class="container mt-1">
-            <section class="mb-5 p-3 text-center about-section">
-                <p>
-                    Everyday we make freshly baked items with the finest organic ingredients. Our products
-                    includes different types of cakes, breads and moussecakes. We strive to make your visit a delightful experience.
-                </p>
-                <h1 class="mb-4">Decorate Cake with Toppings</h1>
-                <!-- Decorate cake game -->
-                <div id="cake" class="mb-4">
-                    <!-- Cake base -->
-                    <div class="vanillaCake"></div>
-                </div>
-                <div class="toppings">
-                    <!-- Topping Options -->
-                    <div class="topping" id="sprinkles" onclick="setTopping('sprinkles')">
-                    <img src="../images/sprinkles.webp" loading="lazy" alt="Sprinkles">
-                    </div>
-                    <div class="topping" id="blueBerry" onclick="setTopping('blueBerries')">
-                    <img src="../images/blueBerries.webp" loading="lazy" alt="Blue Berries">
-                    </div>
-                    <div class="topping" id="cherries" onclick="setTopping('cherries')">
-                    <img src="../images/cherries.webp" loading="lazy" alt="Cherries">
-                    </div>
-                </div>
-                <div class="btn-container">
-                    <button class="btn btn-success" onclick="addTopping()">Add Topping</button>
-                    <button class="btn btn-danger" onclick="removeTopping()">Remove Topping</button>
-                </div> 
-                <div class="btn-container">
-                    Choose your flavour:
-                    <select id="flavour">
-                    <option selected>Vanilla</option>
-                    <option >Pineapple</option>
-                    <option>Chocolate</option>
-                    </select>
-                    <button class="btn btn-success" onclick="changeFlavor()">Apply Flavour</button>
-                </div>
-                <button class="btn btn-danger mt-4" onclick="refresh()">Refresh</button>
-            </section>
-        </main>
-        <footer class="flex-row text-center py-3 brand">
-            <div class="row">
-                <div class="col">
-                    <h4>Address</h4>
-                    <ul class="justify-content-right ms-auto navbar-nav">
-                        <li class="nav-item"><span>55 milbew st,Kilbride</span></li>
-                        <li class="nav-item"><span>Dublin City Center,Co. Dublin</span></li>
+    <title>Bakery - About</title>
+    <meta name="description" content="Bens Bakery website selling a range of delicious pastries and treats." />
+    <meta name="author" content="Allen + Salini">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cookie&family=Jost:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="../js/scripts.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- Navigation -->
+        <!-- Users can select pages or make their cart dropdown to edit it -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                    <!-- Logo created with https://www.aiimagegenerator.org/ -->
+                    <img src="../images/logo.webp" loading="lazy" id="logo" alt="Bens Bakery Logo"
+                        class="rounded-circle">
+                </a>
+                <div class="divider"></div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./menu.html">MENU</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./order.html">ORDER</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="./about.html">ABOUT</a></li>
                     </ul>
                 </div>
-                <div class="col">
-                    <h4>Opening Hours</h4>
-                    <p>8am - 3pm Monday - Friday</p>
+                <div>
+                    <ul class="mb-2 mb-lg-0 mr-md-5 mr-sm-0 navbar-nav">
+                        <!-- Displays the shopping bag total amount. Clicking on the bag will allow user to edit contents -->
+                        <li class="list-inline-item nav-item rounded">
+                            <!-- Shopping Bag -->
+                            <div class="position-relative d-inline-block">
+                                <button id="cartToggle" class="btn bg-transparent border-0">
+                                    <div class="text-center">
+                                        <i class="fas fa-shopping-bag fa-lg"></i>
+                                        <p class="my-0 account-bag">€0.00</p>
+                                    </div>
+                                </button>
+                                <!-- Shopping Bag Dropdown -->
+                                <div id="cartDropdown" class="dropdown-menu dropdown-menu-end p-3 shadow"
+                                    style="display: none;">
+                                    <p class="mb-0">Your cart is empty.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <!--reference from w3 Schools-->
-            <div>
-                <h4>Follow Us</h4>
-                <a href="#" class="fab fa-facebook-f"></a>
-                <a href="#" class="fab fa-instagram"></a>
-                <a href="#" class="fab fa-snapchat-ghost"></a>
+        </nav>
+    </header>
+    <main class="container mt-1">
+        <section class="mb-5 p-3 text-center about-section">
+            <p>
+                Everyday we make freshly baked items with the finest organic ingredients. Our products
+                includes different types of cakes, breads and moussecakes. We strive to make your visit a delightful
+                experience.
+            </p>
+            <h1 class="mb-4">Decorate Cake with Toppings</h1>
+            <!-- Decorate cake game -->
+            <div id="cake">
+                <!-- Cake base -->
+                <div class="vanillaCake"></div>
             </div>
-        </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
+            <div class="toppings">
+                <!-- Topping Options -->
+                <div class="topping" id="sprinkles" onclick="setTopping('sprinkles')">
+                    <img src="../images/sprinkles.webp" loading="lazy" alt="Sprinkles">
+                </div>
+                <div class="topping" id="blueBerry" onclick="setTopping('blueBerries')">
+                    <img src="../images/blueBerries.webp" loading="lazy" alt="Blue Berries">
+                </div>
+                <div class="topping" id="cherries" onclick="setTopping('cherries')">
+                    <img src="../images/cherries.webp" loading="lazy" alt="Cherries">
+                </div>
+            </div>
+            <div class="btn-container">
+                <button class="btn btn-success" onclick="addTopping()">Add Topping</button>
+                <button class="btn btn-danger" onclick="removeTopping()">Remove Topping</button>
+            </div>
+            <div class="btn-container">
+                <span>Choose your flavour:</span>
+                <select id="flavour">
+                    <option selected>Vanilla</option>
+                    <option>Pineapple</option>
+                    <option>Chocolate</option>
+                </select>
+                <div class="mt-2">
+                    <button class="btn btn-success" onclick="changeFlavor()">Apply Flavour</button>
+                    <button class="btn btn-danger" onclick="refresh()">Refresh</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="flex-row text-center py-3 brand">
+        <div class="row">
+            <div class="col">
+                <h4>Address</h4>
+                <ul class="justify-content-right ms-auto navbar-nav">
+                    <li class="nav-item"><span>55 milbew st,Kilbride</span></li>
+                    <li class="nav-item"><span>Dublin City Center,Co. Dublin</span></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Opening Hours</h4>
+                <p>8am - 3pm Monday - Friday</p>
+            </div>
+        </div>
+        <!--reference from w3 Schools-->
+        <div>
+            <h4>Follow Us</h4>
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-snapchat-ghost"></a>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
