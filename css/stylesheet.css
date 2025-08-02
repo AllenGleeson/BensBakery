@@ -42,6 +42,10 @@ nav {
     width: 100%;
 }
 
+.navbar-toggler:focus {
+    box-shadow: 0px 0px 3px black;
+}
+
 .nav-link {
     color: #000000;
     transition: box-shadow 0.2s ease-in-out;
@@ -672,9 +676,41 @@ body {
 
 /* End Salini code */
 
+.shopping-bag-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem;
+    z-index: 1051;
+}
+
+
 /* Media queries */
 
 @media (max-width: 575.98px) {
+    .navbar {
+        height: 6.6rem;
+        margin: 1rem 0rem;
+    }
+
+    .navbar-brand {
+        width: 5rem;
+    }
+
+    .navbar-collapse {
+        background-color: #e733a5;
+        padding: 0.3rem;
+        border-radius: 0rem 0rem 0.5rem 0.5rem;
+    }
+
+    .navbar-toggler {
+        margin-right: 3rem;
+    }
+
+    .shopping-bag-container {
+        top: 1.5rem;
+    }
+
     .shop img {
         width: 100%;
         height: 100%;
