@@ -34,44 +34,40 @@
     <header>
         <!-- Navigation -->
         <!-- Users can select pages or make their cart dropdown to edit it -->
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
+        <nav class="navbar navbar-expand-lg position-relative">
+            <div class="container d-flex justify-content-between align-items-center">
+                <!-- Logo -->
                 <a class="navbar-brand" href="../index.html">
-                    <!-- Logo created with https://www.aiimagegenerator.org/ -->
                     <img src="../images/logo.webp" loading="lazy" id="logo" alt="Bens Bakery Logo"
                         class="rounded-circle">
                 </a>
-                <div class="divider"></div>
+
+                <!-- Navbar Toggler -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+
+                <!-- Shopping Bag (stays top-right always) -->
+                <div class="shopping-bag-container">
+                    <button id="cartToggle" class="btn bg-transparent border-0">
+                        <div class="text-center">
+                            <i class="fas fa-shopping-bag fa-lg"></i>
+                            <p class="my-0 account-bag">€0.00</p>
+                        </div>
+                    </button>
+                    <!-- Dropdown -->
+                    <div id="cartDropdown" class="dropdown-menu dropdown-menu-end p-3 shadow" style="display: none;">
+                        <p class="mb-0">Your cart is empty.</p>
+                    </div>
+                </div>
+
+                <!-- Nav Links -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="../index.html">HOME</a></li>
                         <li class="nav-item"><a class="nav-link" href="./menu.html">MENU</a></li>
                         <li class="nav-item"><a class="nav-link" href="./order.html">ORDER</a></li>
                         <li class="nav-item"><a class="nav-link active" href="./about.html">ABOUT</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <ul class="mb-2 mb-lg-0 mr-md-5 mr-sm-0 navbar-nav">
-                        <!-- Displays the shopping bag total amount. Clicking on the bag will allow user to edit contents -->
-                        <li class="list-inline-item nav-item rounded">
-                            <!-- Shopping Bag -->
-                            <div class="position-relative d-inline-block">
-                                <button id="cartToggle" class="btn bg-transparent border-0">
-                                    <div class="text-center">
-                                        <i class="fas fa-shopping-bag fa-lg"></i>
-                                        <p class="my-0 account-bag">€0.00</p>
-                                    </div>
-                                </button>
-                                <!-- Shopping Bag Dropdown -->
-                                <div id="cartDropdown" class="dropdown-menu dropdown-menu-end p-3 shadow"
-                                    style="display: none;">
-                                    <p class="mb-0">Your cart is empty.</p>
-                                </div>
-                            </div>
-                        </li>
                     </ul>
                 </div>
             </div>
